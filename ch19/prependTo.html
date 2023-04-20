@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		#container {border: solid 1px blue; }
+		.oldbox, .newbox {
+			width: 100px;
+			height: 20px;
+			background: #eee;
+			border: solid 1px red;
+			margin: 3px;
+		}
+		.newbox { background: powderblue; }
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var i = 1;
+			$('button').click(function() {
+				var el = '<div class="newbox">New Box ' + (i++) + '</div>';
+				$(el).prependTo('#container');
+			});
+		});
+	</script>
+</head>
+<body>
+ 	<div id="container">
+	 	<div class="oldbox">Old Box 1</div>
+	 	<div class="oldbox">Old Box 2</div>
+ 	</div><br>
+ 	<button type="button">Prepend</button>
+</body>
+</html>

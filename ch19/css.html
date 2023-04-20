@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {	
+			$('#btFont').click(function() {
+				$('div').css('font', 'bold 20px Tahoma');
+			});
+
+			$('#btBorder').click(function() {
+				$('div').css('border', 'dotted 3px red');
+			});
+
+			$('#btBg').click(function() { 
+				$('div').css('backgroundColor', '#aaddff');
+			});
+			
+		});
+	</script>
+</head>
+
+<body>
+ 	<div style="margin-bottom: 10px">Sample Text</div>
+ 	<button id="btFont">Font</button>
+ 	<button id="btBorder">Border</button>
+ 	<button id="btBg">Background</button>
+</body>
+</html>

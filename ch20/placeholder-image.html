@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Placeholder Image</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	<link href="../plugins/placeholder-image/ph-image.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../plugins/placeholder-image/ph-image.js"></script>
+	<script>
+		$(function() {
+			$('input, textarea').phImage();
+		});
+	</script>
+
+</head>
+<body>	
+	<input type="text" name="name" class="ph-image form-control mb-2" placeholder="Name" data-ph-image="img-placeholder/person.png">
+	<input type="email" name="email" class="ph-image form-control mb-2" placeholder="Email" data-ph-image="img-placeholder/mail.png">
+	<input type="text" name="phone" class="ph-image form-control mb-2" placeholder="Phone" data-ph-image="img-placeholder/phone.png">
+	<textarea name="msg" class="ph-image form-control mb-2" placeholder="Message" data-ph-image="img-placeholder/edit.png"></textarea>
+</body>
+</html>
+
+
+

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$(':button').click(function() { 
+				$('#name').val('James Bond');
+				$('textarea').val('London UK');
+				$('[type=hidden]').val('007');
+			});
+
+			$(':submit').click(function(event) {
+				event.preventDefault();  	//ไม่ให้ส่งข้อมูลจากฟอร์มออกไป
+				var text = '';
+				text += 'Name: ' + $('#name').val() + '\n';
+				text += 'Address: ' + $('textarea').val() + '\n';
+				text += 'Code: ' + $('[type=hidden]').val();
+				alert(text);
+			});
+		});
+	</script>
+</head>
+<body>
+ 	Name:<br>
+	<input type="text" name="name" id="name"><br>
+ 	Address:<br>
+	<textarea name="address"></textarea><br>
+ 	<input type="hidden" name="code" value="abc1234"><br>
+    	<button type="button">Set Data</button>
+ 	<button type="submit">Read Data</button>
+</body>
+</html>

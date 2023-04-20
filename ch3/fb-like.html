@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML FB Like</title>
+</head>
+
+<body>
+	<h2>ทดสอบ</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+	</p>
+	<hr>	
+	
+	<!-- โค้ดของปุ่มถูกใจที่คัดลอกมา -->
+	<div id="fb-root"></div>
+	<script>
+	(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.2';
+  		fjs.parentNode.insertBefore(js, fjs);
+	} (document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<div class="fb-like" data-href="http://www.developethai.com/responsive/ch3/fb-like.html" 
+		data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true">
+	</div>
+	<!-- สิ้นสุดโค้ดของปุ่มถูกใจ -->
+</body>
+</html>

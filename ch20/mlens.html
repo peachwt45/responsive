@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MLens</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	<link href="../plugins/mlens/style.mlens.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../plugins/mlens/jquery.mlens.min.js"></script>
+	<script>
+		$(function() {	
+  			$('#zoomImage').mlens({
+				lensShape: 'circle',			// shape of the lens (circle/square)
+				lensSize: ['20%','35%'],		// size of the lens
+				borderSize: 1,					// size of the lens border (in px)	
+    				borderColor: '#fff',		 // color of the lens border (#hex)			
+   				 borderRadius: 0,			//border radius (only if the shape is square)
+    				zoomLevel: 2, 			
+				responsive: true			// is responsive
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="mlens-img-container">
+		<img id="zoomImage"  src="img-mlens/WinterSoldier.jpg" alt="image alt">
+	</div>
+</body>
+</html>
+
+
+
+
+

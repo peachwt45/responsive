@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		div {
+			font: italic 30px Arial;
+			color: blue;
+			border: solid 2px red;
+			background: #cdf;
+			margin: 3px;
+		}
+ 		p { font: bold 20px tahoma; }
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('#btWrap').click(function() {
+				$('p').wrap('<div></div>');
+			});
+
+			$('#btUnwrap').click(function() {
+				$('p').unwrap();
+			});
+		});
+	</script>
+</head>
+<body>
+ 	<p>Sample Text in Paragraph</p>
+ 	<div>Sample Text in Div</div>
+ 	<br>
+	<button id="btWrap">Wrap</button>
+ 	<button id="btUnwrap">Unwrap</button>
+</body>
+</html>

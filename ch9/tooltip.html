@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Component</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	 <script>
+ 		$(function () {
+ 			$('[data-toggle="tooltip"]').tooltip();
+ 		});	
+ 	</script>
+</head>
+<body class="p-3">
+ 	<button 	class="btn btn-danger" 
+ 			data-toggle="tooltip" title="ข้อมูลจะถูกลบทั้งหมด">Delete
+ 	</button>
+	<br><br>
+ 	<a 	href="#" data-toggle="tooltip" data-placement="bottom" 
+ 		title="ไปที่เว็บไซต์ www.developerthai.com">DeveloperThai</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>
+ 		var base = parseFloat(prompt('เลขฐาน'));
+ 		var power = parseInt(prompt("เลขชี้กำลัง (จำนวนเต็มบวก) "));
+
+ 		if (power < 0)  {
+			alert('กรุณาใส่เลขชี้กำลังเป็นจำนวนเต็มบวก');
+ 		} else {
+ 			var result = 1;
+ 			for (i = 1; i <= power; i++) {
+  				result *= base;
+ 			}
+			
+  			document.write(base + '<sup>' + power + '</sup> = ' + result);
+ 		}
+	</script>
+
+</body>
+</html>

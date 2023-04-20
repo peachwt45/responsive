@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('form').submit(function(event) {
+				if($(':text').val() == '' || $(':password').val() == '') {
+					event.preventDefault();
+					alert('กรุณาใส่ข้อมูลให้ครบ');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<form action="test.php">
+		Login:<input type="text" required><br><br>
+    		Pswd:<input type="password"><br><br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>

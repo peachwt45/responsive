@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Embedded Font</title>
+	<style> 
+ 		@font-face {
+   			font-family: chonburi;
+   			src: url(fonts/Chonburi-Regular.ttf);
+ 		}
+ 		@font-face {
+    			font-family: pattaya;
+    			src: url(fonts/Pattaya-Regular.ttf);
+ 		}
+ 		@font-face {
+    			font-family: sriracha;
+    			src: url(fonts/Sriracha-Regular.ttf);
+ 		}
+		
+ 		h2 {	font-family: chonburi; }
+ 		div {
+	 		font-family: pattaya;
+	 		font-size: 1.25rem;
+ 		}
+ 		p {
+ 			font-family: sriracha;
+ 			font-style: italic;
+ 			font-size: 0.9rem;
+ 		}
+	</style>
+</head>
+<body>
+ 	<h2>การแนบฟอนต์ไปกับเว็บเพจ</h2>
+ 	<div>
+ 		ควรเลือกชนิดฟอนต์ที่เว็บเบราเซอร์ส่วนใหญ่รองรับ ได้แก่ TTF, OTF หรือ WOFF
+ 		แล้วกำหนดชื่ออ้างอิงและตำแหน่งที่เก็บไฟล์ฟอนต์ด้วยบล็อกคำสั่ง @font-face { } 
+ 	</div>
+ 	<p>
+ 		เมื่อเราจะใช้ฟอนต์กับแท็กใด ก็นำชื่ออ้างอิงไปกำหนดให้แก่พร็อปเพอร์ตี้ font-family
+ 		ของซีเล็กเตอร์ที่เชื่อมโยงกับแท็กนั้น 
+ 	</p>
+</body>
+</html>

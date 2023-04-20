@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Touch Spin</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	 <link href="../plugins/touch-spin/touch-spin.min.css" rel="stylesheet"> 
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../plugins/touch-spin/touch-spin.min.js"></script>
+	<script>
+		$(function() {	
+			$('#spin1').touchSpin({
+				min: 0,
+        			max: 10,
+				initval: 0,
+				step: 2
+			});
+			
+			$('#spin2').touchSpin({
+				min: 0,
+        			max: 10,
+				initval: 0,
+				step: 2,
+				decimals: 1,
+				prefix: '$',
+				//postfix: '%',
+				buttondown_class: 'btn btn-success',
+				buttonup_class: 'btn btn-success',
+				buttondown_txt: '-',
+				buttonup_txt: '+',
+				mousewheel: true
+			});
+			
+			$('#spin3').touchSpin({
+				min: 0,
+        			max: 10,
+				initval: 0,	
+				step: 2,
+				decimals: 1,
+				//prefix: '$',
+				postfix: '%',
+				buttondown_class: 'btn btn-success',
+				buttonup_class: 'btn btn-success',
+				buttondown_txt: '-',
+				buttonup_txt: '+',
+				mousewheel: true
+			});
+			
+			//แนวทางการอ่านค่าทันทีที่ค่าเปลี่ยนแปลง		
+			// วิธีที่ 1
+			/*
+			$('#spin1').change(function() {
+				var v = $(this).val();
+				//...
+			});
+			*/
+			
+			// วิธีที่ 2
+			/*
+			$('#spin1').on('touchspin.on.startspin', function() {
+				var v = $(this).val();
+				//...
+			});
+			*/
+			
+			// หากต้องการบล็อกไม่ให้พิมพ์ค่าโดยตรงทางคีย์บอร์ด
+			/*
+			$('input[name="spin"]').keypress(function(event) {
+				event.preventDefault();
+			});
+			*/
+		});
+	</script>
+</head>
+<body>
+	<input id="spin1" type="text" name="spin"><br>
+	<input id="spin2" type="text" name="spin"><br>
+	<input id="spin3" type="text" name="spin">
+	
+	<span id="value"></span>
+
+</body>
+</html>
+
+
+

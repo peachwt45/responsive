@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		input[type="text"] { display: block; margin-top: 2px; }
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('#bt-add').click(function() {
+ 				//เลือกอินพุทชนิด text ตัวสุดท้ายที่อยู่ใน  #container
+				var el = $('#container > input[type=text]:last');
+				var input;
+		
+				//ตรวจสอบว่ามีอินพุทหรือไม่ เผื่อกรณีที่ลบอินพุท text ออกไปจนหมดแล้ว
+				if (el.length > 0) {
+					input = el.clone();
+				} else {
+					input = '<input type="text" name="choice[]">';
+				}
+		
+				$('#container').append(input);
+			});
+	
+			$('#bt-remove').click(function() {
+				//ถ้ามีอินพุท text เหลืออยู่ก็ให้ลบออกไป  เราอาจตรวจสอบด้วย length เหมือนข้างบนก็ได้
+				if ($('#container:has(input[type=text])')) {
+					$('#container > input[type=text]:last').remove();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+ 	คำถาม: <input type="text" name="question" size="40"><br>
+ 	ตัวเลือก: 
+ 	<button type="button" id="bt-add">+</button>
+ 	<button type="button" id="bt-remove">-</button><br>
+ 	<div id="container">
+		<input type="text" name="choice[]">
+		<input type="text" name="choice[]">
+ 	</div>
+</body>
+</html>

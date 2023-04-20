@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Nth Child Selector</title>
+	<style>
+		div > :nth-child(1) {
+    			background-color: lightgray;
+    			font-size: 20px;
+        		font-weight: bold;
+   	 	}
+   		div > :nth-child(even) {
+    			background-color: black;
+        		color: white;
+        		font-style: italic;
+    		}
+    		div > :nth-child(3n) { text-decoration: underline; }
+	</style>
+</head>
+<body>
+	<div>
+    		<p>This is nth-child(1)</p>
+        	<p>This is nth-child(2)</p>
+        	<p>This is nth-child(3)</p>
+		<span>This is nth-child(4)</span>
+    </div>
+</body>
+</html>

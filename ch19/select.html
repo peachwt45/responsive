@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('#show').click(function() {
+				var text = '';
+				$('option:selected').each(function() {
+					text += $(this).val() + '\n';
+				});
+				alert(text);
+			});
+	
+			$('#chk-multiple').change(function() {
+				if ($(this).is(':checked')) {
+					$('select').prop({'multiple': true, 'size': 5});
+				} else {
+					$('select').prop({'multiple': false, 'size': 1});
+				}
+			});
+	
+			$('#set-idx').click(function() {
+				var index = parseInt($('#index').val());
+				if (index >= 0 && index < $('option').length) {
+					$('select').prop('selectedIndex', index);
+				} else {
+					alert('Index out of range');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+ 	<select>
+		<option value="HTML">HTML</option>
+    		<option value="CSS">CSS</option>
+    		<option>Bootstrap</option>
+   		<option>JavaScript</option>
+		<option>jQuery</option>
+ 	</select>
+ 	<input type="checkbox" id="chk-multiple">Multiple Selection
+	<br><br>
+  	<button type="button" id="show">Show Selected</button><br><br>
+  	<button type="button" id="set-idx">Set Selected Index</button>:
+  	<input type="text"  id="index" size="1">
+</body>
+</html>

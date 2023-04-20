@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Component</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+<body class="p-3">
+ 	<!-- ปุ่มสำหรับเปิด Modal ในแบบแอตทริบิวต์ HTML -->
+ 	<button 	class="btn btn-primary" data-toggle="modal" 
+ 			data-target="#myModal">Open modal
+ 	</button>
+	<!-- องค์ประกอบของ Modal -->
+ 	<div class="modal" id="myModal">
+    		<div class="modal-dialog modal-dialog-centered">
+     		<div class="modal-content">
+       			<div class="modal-header">
+ 					<h4 class="modal-title">เกี่ยวกับ Modal</h4>
+        				<button 	class="close" 
+ 							data-dismiss="modal">&times;</button>
+       			</div>
+       			<div class="modal-body">
+         				Modal เป็นกรอบวินโดว์ขนาดเล็กในรูปแบบไดอะล็อก ซึ่งอาจใช้
+ 					แสดงข้อความ หรือแสดงฟอร์มเพื่อรับข้อมูล หรือประยุกต์ใช้ในลักษณะอื่นๆ
+ 					ตามที่เราต้องการ  
+       			</div>
+      			 <div class="modal-footer">
+	   				<button class="btn btn-primary">Share</button>
+         				<button 	class="btn btn-danger" 
+ 							data-dismiss="modal">Close</button>
+				</div>
+ 			</div>  	<!-- modal-content -->
+ 		</div>		<!-- modal-dialog -->
+ 	</div>			<!-- modal -->
+</body>
+</html>

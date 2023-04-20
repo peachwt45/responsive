@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>
+		let size = parseFloat(prompt('ขนาดของไฟล์ (ไบต์)'));
+        	var unit;
+		
+        	if (size >= 1099511627776) {  //ถ้าขนาด 1,099,511,627,776 ขึ้นไป ให้แปลงเป็นหน่วย TB
+            	size /= 1099511627776;
+            	unit = "TB";
+       	} else if (size >= 1073741824) {  //ถ้าขนาด 107,3741,824 ขึ้นไป ให้แปลงเป็นหน่วย GB
+            	size /= 1073741824;
+            	unit = "GB";
+        	} else if (size >= 1048576) {  	//ถ้าขนาด 1,048,576 ขึ้นไป ให้แปลงเป็นหน่วย MB
+            	size /= 1048576;
+            	unit = "MB";
+        	} else if (size >= 1024) {    		//ถ้าขนาด 1,024 ขึ้นไป ให้แปลงเป็นหน่วย KB
+            	size /= 1024;
+            	unit = "KB";
+        	} else {      		//ถ้าขนาดน้อยกว่า 1,024 ให้เป็นหน่วย Byte เช่นเดิม
+            	unit = "Byte";
+       	}
+		
+        	document.write("ของไฟล์ที่เหมาะสมคือ: " + size.toFixed(2) + ' ' + unit);
+	</script>
+
+</body>
+</html>

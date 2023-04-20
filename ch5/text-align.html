@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Text Align</title>
+ 	<style>
+		p.justify {
+ 			background-color: lightgray; 
+        		text-align: justify;
+        		width: 300px;
+   		}
+    		span.super { vertical-align: super }
+    		span.sub { vertical-align: sub }
+    		div.middle-vert {
+ 			background-color: lightgray;
+ 			width: 300px;
+ 			height: 50px;
+ 			text-align: center;
+ 			vertical-align: middle;
+ 			display: table-cell;
+   		}
+   		p.indent { 
+        		background-color: lightgray; 
+        		text-indent: 50px;
+       		width: 300px;
+    		}
+	</style>
+</head>
+<body>
+	<p class="justify">
+     	ลักษณะการจัดรูปแบบข้อความ เช่น การขีดเส้นแบบต่างๆ 
+ 		การจัดแนวซ้ายขวา การกำหนดระยะห่าง 
+ 		และการตกแต่งในลักษณะอื่นๆ อีกหลายแบบ 
+    </p>    
+	<p>e = mc<span class="super">2</span> (super)</p>
+	<p>O<span class="sub">2</span> (sub)</p>
+ 	<div class="middle-vert">Middle Vertical</div>
+	<p class="indent">
+ 		การจัดแนวของข้อความเป็นการกำหนดว่าจะให้ข้อความ
+        	อยู่ชิดขอบทางด้านใด รวมถึงระยะการเยื้องจากแนวขอบ
+    </p>
+</body>
+</html>

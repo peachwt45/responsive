@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		div#nav {
+			width: 100px;
+			background: #cdf;
+		}
+		div#nav > a {
+			display: block;
+			padding: 5px;
+		}
+		div#nav > a:not(:first-child) { border-top: solid 1px white; }
+		div#nav > a:not(:last-child) { border-bottom: solid 1px #aaa; }
+		a.highlight { background: #ffc; }
+	</style>
+
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('div#nav > a').hover(
+				function() {
+					$(this).toggleClass('highlight');
+				},
+				function() {
+					$(this).toggleClass('highlight');
+				}
+ 			);
+			/*
+			หรือถ้าไม่ใช้ hover() ก็อาจเขียนอีกแบบเป็น
+			$('div#nav > a').on('mouseenter mouseleave', function() {
+ 				$(this).toggleClass('highlight');
+			});
+			*/
+		});
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<a href="#">Menu 1</a>
+		<a href="#">Menu 2</a>
+		<a href="#">Menu 3</a>
+	</div>
+</body>
+</html>

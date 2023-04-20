@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+ 	<div id="dv"></div>
+ 	<script>
+ 		var t = 10;
+ 		var wait = function() {
+	 		if (t > 0) {
+		 		var str = 'Free download please wait: <br>' + t + 
+ 						 ' second(s)';
+
+		 	 	document.getElementById('dv').innerHTML = str
+		 	 	t--;
+	 	 	} else {
+			 	var str = '<a href="#">Download Now</a>';
+			 	document.getElementById('dv').innerHTML = str
+			 	return;
+		 	}
+ 		}
+ 	 	setInterval(wait, 1000);
+ 	</script>
+</body>
+</html>

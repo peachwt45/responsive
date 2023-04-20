@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap</title>
+	<style>
+		div[class*="h-"] {		/* div ที่แอตทริบิวต์ class มี "h-" รวมอยู่ด้วย */
+			display: inline-block;
+		}
+	</style>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>	
+</head>
+<body class="p-2">
+	<div class="w-25 mb-2 p-2 bg-dark text-white">Width 25%</div>
+	<div class="w-50 mb-2 p-2 bg-dark text-white">Width 50%</div>
+	<div class="w-75 mb-2 p-2 bg-dark text-white">Width 75%</div>
+	<div class="w-100 mb-2 p-2 bg-dark text-white">Width 100%</div>
+	<br>
+	<div class="w-100 mt-2 p-2" style="height: 200px; background-color: lightgray">
+		<div class="h-25 mr-2 p-2 bg-dark text-white">Height 25%</div>
+		<div class="h-50 mr-2 p-2 bg-dark text-white">Height 50%</div>
+		<div class="h-75 mr-2 p-2 bg-dark text-white">Height 75%</div>
+		<div class="h-100 mr-2 p-2 bg-dark text-white">Height 100%</div>
+	</div>
+</body>
+</html>

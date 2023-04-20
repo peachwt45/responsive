@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Side Menu</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	<link href="../plugins/side-menu/font-awesome/css/all.min.css" rel="stylesheet">
+	<link href="../plugins/side-menu/style.side-menu.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../plugins/side-menu/script.side-menu.js"></script>
+	<script>
+		$(function() {	
+			sideMenu();
+		});
+	</script>
+</head>
+<body>
+	<div class="side-menu left">
+  	<ul>
+    		<li><a href="#" class="active"><i class="fas fa-home"></i>หน้าแรก</a></li>
+    		<li><a href="#"><i class="fas fa-shopping-cart"></i>สินค้า</a></li>
+    		<li> <a href="#"><i class="fas fa-laptop"></i>ระบบ<i class="fa fa-caret-down"></i></a>
+      	<ul>
+        		<li><a href="#"><i class="fab fa-apple"></i>iOS</a></li>
+        		<li><a href="#"><i class="fab fa-android"></i>Android</a></li>
+			<li><a href="#"><i class="fab fa-windows"></i>Windows</a></li>
+      	</ul>
+    		</li>
+    			<li><a href="#"><i class="fas fa-phone"></i>ติดต่อเรา</a></li>
+  		</ul>
+		
+		<!-- ปุุ่ม menu bar เพื่อซ่อนและแสดงเมนู ไห้วางไว้ท้ายสุด -->
+		 <a href="#" class="side-menu-toggle"><i class="fas fa-bars" style="color:green"></i></a>
+	</div>
+	
+</body>
+</html>

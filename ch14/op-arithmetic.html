@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+
+<body>
+	<script>
+		var a = 10;
+		var b = 20;
+		document.write('ก่อนสลับค่า a = ', a,  ', b = ', b);
+
+		b = a + b;              //b = 10 + 20 = 30
+		a = b - a;              //a = 30 - 10 = 20
+		b = b - a;              //b = 30 - 20 = 10
+		document.write('<br>หลังสลับค่า a = ', a, ', b = ', b);
+
+		a = 108;
+		b = -1009;
+		document.write('<br><br>ก่อนสลับค่า a = ', a, ', b = ', b);
+
+		b = a + b;
+		a = b - a;
+		b = b - a;
+		document.write('<br>หลังสลับค่า a = ', a, ', b = ', b);
+	</script>
+</body>
+</html>

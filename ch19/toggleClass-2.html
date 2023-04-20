@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		tr.highlight { background: #ffc; }
+		tr.selected { 	background: skyblue; }
+		th, td { 	padding: 2px 5px; }
+		th:nth-child(2) { width: 100px; }
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			//ไฮไลต์แถวที่เลื่อนเมาส์ผ่าน ยกเว้นแถวแรก
+			$('tr:not(:first)').on('mouseenter mouseleave', function() {
+				$(this).toggleClass('highlight');	
+			});
+	
+			//ไฮไลต์แถวที่เลือก
+			$(':checkbox').change(function() { 			
+				$(this).parent().parent().toggleClass('selected');
+			});
+		});
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr><th>&nbsp;</th><th>Browsers</th></tr>
+    		<tr><td><input type="checkbox"></td><td>Chrome</td></tr>
+    		<tr><td><input type="checkbox"></td><td>Edge</td></tr>
+		<tr><td><input type="checkbox"></td><td>Firefox</td></tr>
+		<tr><td><input type="checkbox"></td><td>Opera</td></tr>
+	</table>
+</body>
+</html>

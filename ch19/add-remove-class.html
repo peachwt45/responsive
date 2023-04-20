@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		.bt {
+			background-color: blue;
+			color: white;
+		}	
+		.bt-mouseover {
+			background-color: salmon;
+			color: aqua;
+			cursor: pointer;
+		}
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('button').hover(
+				function() {
+					$(this).addClass('bt-mouseover');
+				},
+				function() {
+					$(this).removeClass('bt-mouseover');
+					$(this).addClass('bt');						
+				}
+			);
+			/*
+			$('button').mouseover(function() {		//เมื่อเลื่อนเมาส์มาวางเหนืออิลิเมนต์
+				
+			});
+		
+			$('button').mouseout(function() {		//เมื่อเลื่อนเมาส์ออกจากอิลิเมนต์
+		
+			});
+			*/
+		});
+	</script>
+</head>
+<body>
+ 	<button class="bt">Submit</button>
+ 	<button class="bt">Reset</button>
+ 	<button class="bt">Back</button>
+</body>
+</html>

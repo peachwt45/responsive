@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		input[type="text"] { display: block; margin-top: 2px; }
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('#bt-add').click(function() {
+				var input  = $('#container > input[type=text]:last').clone();
+				$('#container').append(input);
+			});
+		});
+	</script>
+</head>
+<body>
+ 	คำถาม: <input type="text" name="question" size="40"><br>
+ 	ตัวเลือก: <button type="button" id="bt-add">+</button><br>
+ 	<div id="container">
+	 	<input type="text" name="choice[]">
+	 	<input type="text" name="choice[]">
+ 	</div>
+</body>
+</html>

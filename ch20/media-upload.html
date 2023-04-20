@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Media Upload</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	<link href="../plugins/media-upload/font-awesome/css/all.min.css" rel="stylesheet">
+	<link href="../plugins/media-upload/style.media-upload.css" rel="stylesheet">	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../plugins/media-upload/jquery.media-pload.js"></script>
+	<script>
+		$(function() {
+
+		});
+	</script>
+</head>
+<body>
+    <!-- Boostatrp Modal-->
+    <div class="modal fade popups" id="modalUpload" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content clearfix">
+                <div class="modal-body login-box clearfix">
+				 
+                    <!-- ส่วนของการโพสต์ข้อความ -->
+                    <div class="user-post-text-wrap">
+                        <div class="user-pic-post">
+                            <img src="img-media-upload/noimage.png" alt="profile image"> <!-- กำหนดรูปภาพ profile เอาเอง -->
+                        </div>
+                        <div class="user-txt-post">
+                            <textarea class="form-control upostTextarea" placeholder="คุณคิดอะไรอยู่"></textarea>
+                        </div>
+                    </div>
+				 
+                    <!-- ส่วนแสดงรายการไฟล์ที่ถูกเลือก -->
+                    <ul id="media-list" class="clearfix">
+                        <li class="myupload">
+                            <span>
+						   <i class="fa fa-plus" aria-hidden="true"></i>
+						   <input type="file" click-type="type2" id="picupload" class="picupload" multiple>
+					    </span>
+                        </li>
+                    </ul>
+
+                    <!-- ปุ่ม post-->
+                    <div class="user-post-btn-wrap clearfix">
+                        <input type="submit" class="btn btn-primary" value="post">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>	<!--สิ้นสุด Bootstrap Modal -->
+	
+	<!-- ปุ่มสำหรับเรียก Modal ขึ้นมาแสดง -->
+	<button class="btn btn-primary" data-toggle="modal" data-target="#modalUpload">Upload Media File</button>
+</body>
+</html>
+
+
+

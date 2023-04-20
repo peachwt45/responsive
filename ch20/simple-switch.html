@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Switch</title>
+	<style>
+		body {
+			padding:  20px
+		}
+	</style>
+	<link href="../plugins/simple-switch/simple-switch.min.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../plugins/simple-switch/simple-switch.min.js"></script>
+	<script>
+		$(function() {
+			$('#switch1, #switch2').simpleSwitch();
+			
+			/* กรณีที่จะตรวจสอบการเปลี่ยนแปลงทันทีที่เลื่อน switch
+			$('#switch2').change(function() {
+				var checked = $(this).prop('checked');	//true || false
+				//...
+			});
+			*/
+			
+			/* แนวทางการตรวจสอบสถานะในขณะใดขณะหนึ่ง
+			$('button').click(function() {
+				var checked = $('#switch2').prop('checked');	//true || false
+				if (checked) {
+					//...
+				}
+			})
+			*/
+		});
+	</script>
+</head>
+<body>
+	<input type="checkbox" id="switch1" value="test" ><br><br>
+	<input type="checkbox" id="switch2" value="test" checked>
+	<br><br>
+	<button>Test</button>
+</body>
+</html>
+
+
+

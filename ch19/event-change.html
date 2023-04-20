@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		div#sample-text {
+			font-size: 20px;
+			border: solid 1px brown;
+			background: #cdf;
+			padding: 3px;
+		}
+		div.box {
+			float: left;
+			margin: 5px;
+			padding: 3px;
+			border: solid 1px brown;
+		}
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var el = $('div#sample-text');
+			$(':text').change(function() {
+				el.html($(this).val());
+			});
+	
+			$(':checkbox').change(function() {	
+				if ($(this).is(':checked')) {
+					if ($(this).val() == 'bold') {
+						el.css('font-weight', 'bold');
+					} else if ($(this).val() == 'italic') {
+						el.css('font-style', 'italic');
+					} else if ($(this).val() == 'underline') {
+						el.css('text-decoration', 'underline');
+					}
+				} else {
+					if ($(this).val() == 'bold') {
+						el.css('font-weight', 'normal');
+					} else if ($(this).val() == 'italic') {
+						el.css('font-style', 'normal');
+					} else if ($(this).val() == 'underline') {
+						el.css('text-decoration', 'none');
+					}			
+				}
+			});
+	
+			$(':radio').change(function() {
+				var c = $(':radio:checked').val();
+				el.css('color', c);
+			});
+	
+			$('select').change(function() {
+				el.css('font-size', $('option:selected').val());
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="sample-text">Sample Text</div><br>
+ 	<div class="box">ใส่ข้อความ:<br><input type="text"></div>
+ 	<div class="box">รูปแบบ:<br>
+ 		<input type="checkbox" value="bold">หนา<br>
+ 		<input type="checkbox" value="italic">เอียง<br>
+ 		<input type="checkbox" value="underline">ขีดเส้นใต้
+ 	</div>
+ 	<div class="box">สี:<br>
+ 		<input type="radio" name="color" value="red">แดง<br>
+ 		<input type="radio" name="color" value="green">เขียว<br>
+ 		<input type="radio" name="color" value="blue">น้ำเงิน
+ 	</div>
+ 	<div class="box">ขนาด:<br>
+ 		<select>
+			<option>20px</option>
+     		<option>30px</option>
+ 		</select>
+ 	</div>
+</body>
+</html>

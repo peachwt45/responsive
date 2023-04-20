@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+
+<body>
+	<script>
+		var thaiDigits = ['๐', '๑', '๒', '๓', '๔', '๕', 
+ 								'๖', '๗', '๘', '๙'];
+		
+ 		var words = ['ศูนย์', 'หนึ่ง', 'สอง', 'สาม', 'สี่', 'ห้า', 
+ 								'หก', 'เจ็ด', 'แปด', 'เก้า'];
+		
+ 		var number = prompt('กำหนดตัวเลขอารบิคเป็นจำนวนเต็มบวก');
+ 		var len = number.length;	//ความยาวของสตริง
+
+ 		var thaiNum = '';
+ 		var thaiWord = '';		
+ 		var digit = '';
+
+ 		for (i = 0; i < len; i++) {
+ 			digit = number.charAt(i);		//อักขระในลำดับที่ i
+ 			thaiNum += thaiDigits[digit];
+ 			thaiWord += words[digit];
+ 		}
+		
+ 		document.write('เลขไทย: ' + thaiNum + '<br>');
+ 		document.write('คำอ่าน: ' + thaiWord + '<br>');
+	</script>
+</body>
+</html>

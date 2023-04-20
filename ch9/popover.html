@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Component</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	 <script>
+ 		$(function () {
+ 			$('[data-toggle="popover"]').popover();
+ 		});	
+ 	</script>
+</head>
+<body class="p-3">
+	<button 	class="btn btn-danger" data-toggle="popover" 
+ 			title="คำเตือน" data-content="ข้อมูลจะถูกลบอย่างถาวร">Delete
+	</button>
+	<br><br>
+ 	<a 	href="#" data-toggle="popover" data-placement="bottom" 
+ 		title="DeveloperThai" data-content="เว็บไซต์สำหรับนักพัฒนาแอปพลิเคชัน">
+ 		DeveloperThai</a>
+</body>
+</html>

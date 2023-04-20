@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('#bt').on('click', function() {
+				alert('โพสต์ข้อความเรียบร้อยแล้ว');
+				$(this).off('click');
+			});
+		});
+		/*
+		 $(function() {
+	 		$('#bt').one('click', function() {
+				alert('โพสต์ข้อความเรียบร้อยแล้ว');
+	 		});
+ 		});
+		*/
+	</script>
+</head>
+<body>
+	<form>
+ 		คุณกำลังคิดอะไรอยู่: <br>
+    		<textarea name="status" cols="30" rows="2"></textarea><br>
+		<button type="button" id="bt">ตกลง</button>
+	</form>
+</body>
+</html>

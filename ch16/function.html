@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>		
+		function randomInt(min, max) {
+  			return Math.floor(Math.random() * (max - min + 1) + min);
+		}
+		
+		function randomFloat(min, max) {
+  			return Math.random() * (max - min) + min;
+		}
+		
+		function randomBoolean() {
+   			return Math.random() >= 0.5;	//ถ้าได้ตั้งแต่ 0.5 ขึ้นไปคืนค่า true มิฉะนั้นคืนค่า false
+		}
+		
+		function randomLowercaseLetter() {
+			return String.fromCharCode(randomInt(65, 90));		//'A' = 65, 'Z' = 90
+		}
+		
+		function randomUppercaseLetter() {
+			return String.fromCharCode(randomInt(97, 122));	//'a' = 97, 'z' = 122
+		}
+		
+		var code = '';
+		var r = '';
+		
+		for (i = 1; i <= 6; i++) {
+			r = randomInt(0, 9);	//สร้างเลขสุ่มระหว่าง 0-9 เพื่อใช้ตัดสินใจในการเลือกอักขระสำหรับแต่ละตำแหน่ง
+			
+			if (r >= 7) {		//ถ้าสุ่มได้เลขตั้งแต่ 7 ขึ้นไป ให้รหัสในตำแหน่งนั้นเป็นตัว A-Z			
+				code += randomUppercaseLetter();
+				
+			} else if (r >= 4) {	//ถ้าสุ่มได้เลขตั้งแต่ 4 ขึ้นไป ให้รหัสในตำแหน่งนั้นเป็นตัว a-z
+				code += randomLowercaseLetter();
+				
+			} else {					//ถ้าสุ่มได้เลขตั้งแต่ 3 ขึ้นไป ให้รหัสในตำแหน่งนั้นเป็นเลข 0-9
+				r = randomInt(0, 9);
+				code += r;
+			}
+		}
+		
+		alert(code);
+		
+	</script>
+</body>
+</html>
+ 

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>	
+		$(function() {
+			$('img').mousedown(function(event) {
+				event.preventDefault();
+				var n = event.which;
+				if (n == 1) {  			//ปุ่มซ้าย
+					location.href = 'https://jquery.com';
+				} else if (n == 3) {		//ปุ่มขวา
+					alert('ห้ามบันทึกภาพนี้');
+				}
+			});
+			
+			$('img').contextmenu(function(event) {
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="jquery.png" width="150" alt="jquery">
+</body>
+</html>
+	

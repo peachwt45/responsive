@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$('button').click(function() {
+				$('input[type="text"]').val('Somsri Deelert');
+				$('textarea').val('1234 Bangkok Thailand');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<form>
+ 		Name:<br>	<input type="text" id="name"><br>
+ 		Address:<br>
+ 		<textarea id="address" cols="25" rows="2"></textarea><br>
+ 		<button type="button">Add Info</button>
+	</form>
+</body>
+</html>

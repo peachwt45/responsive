@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Border Style</title>
+	<style>
+ 		p { width: 300px }
+		#p1 {
+			border-top-style: solid;
+			border-bottom-style: dotted
+		}
+		#p2 {
+			border-top-style: dashed;
+			border-right-style: solid;
+			border-bottom-style: solid;
+			border-left-style: dashed
+		}
+		#p3 { border-style: double; }
+		#p4 { border-style: groove; }	
+	</style>
+</head>
+<body>
+ 	<p id="p1">ขอบบน: solid, ขอบล่าง: dotted</p>
+    <p id="p2">
+    		ขอบบน: dashed, ขอบขวา solid<br>
+ 		ขอบล่าง: solid, ขอบซ้าย dashed
+    </p>
+    <p id="p3">ขอบทั้ง 4 ด้าน: double</p>
+    <p id="p4">ขอบทั้ง 4 ด้าน: groove</p>
+</body>
+</html>

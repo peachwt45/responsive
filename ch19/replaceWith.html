@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	<style>
+		input[type=text] {
+			background: honeydew;
+			border: solid 1px orange;
+		}
+	</style>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		$(function() {
+			//เริ่มแรก ให้ปุ่ม Edit อยู่ในสถานะ disabled
+ 			$('button:nth-child(2)').prop('disabled', true);
+	
+ 			//เมื่อคลิกปุ่ม Edit
+ 			$('button:nth-child(1)').click(function() {
+ 				//ค้นหา <td> ที่อยู่ถัดจากเซลล์ที่บรรจุปุ่มที่ถูกคลิก แล้วอ่านข้อความจากเซลล์นั้น
+				var elem = $(this).parent().next();
+				var value = elem.text();
+
+ 				//วางอินพุท text ลงในเซลล์เป้าหมาย(ตรงนี้ใช้ replaceWith() ไม่ได้)
+ 				elem.html('<input type="text" value="' + value + '">');
+
+				//ให้ปุ่ม Edit อยู่ในสถานะ disabled เพื่อป้องกันการคลิกซ้ำ
+				$(this).prop('disabled', true);
+		
+ 				//ยกเลิกสถานะ disabled ของปุ่ม Update
+				$(this).next().prop('disabled', false);
+			});
+
+			//เมื่อคลิกปุ่ม Update
+			$('button:nth-child(2)').click(function() {
+ 				//ค้นหาอินพุท text ที่อยู่ถัดจากเซลล์ที่บรรจุปุ่มที่ถูกคลิก แล้วอ่านข้อความจากอินพุทนั้น
+				var elem = $(this).parent().next().find(':text');
+				var value = elem.val();
+
+ 				//แทนที่อินพุท text ด้วยข้อความที่อ่านได้จากอินพุทนั้น
+ 				elem.replaceWith(value);
+
+				//ให้ปุ่ม Update อยู่ในสถานะ disabled
+				$(this).prop('disabled', true);
+
+ 				//ยกเลิกสถานะ disabled ของปุ่ม Edit
+				$(this).prev().prop('disabled', false);
+			});
+		});
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr><th>Action</th><th>Products</th></tr>
+    		<tr>
+ 			<td><button>Edit</button><button>Update</button></td>
+ 			<td>iPhone</td>
+ 		</tr>
+		<tr>
+ 			<td><button>Edit</button><button>Update</button></td>
+ 			<td>iPad</td>
+ 		</tr>
+	</table>
+</body>
+</html>

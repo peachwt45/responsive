@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>
+		var string = 'JavaScript, javascript, JAVASCRIPT, \
+					JavaScript, JAVASCRIPT, javascript, \
+					ECMAScript, javaSCRIPT,JAVAscript';
+
+		var findStr = /javascript/ig;	
+		var match = string.match(findStr);	//คืนค่าเป็นอาร์เรย์
+		if (match != null) {
+			alert(match.length);			//8
+		}
+
+		//แทนที่คำว่า 'javascript' ด้วย 'JavaScript'		
+		var newStr = string.replace(findStr, 'JavaScript');   
+		document.write(newStr + '<br><br>');
+
+		//แทนที่คำว่า 'JAVASCRIPT' ด้วย '<b>ECMAScript</b>'
+		findStr = /JAVASCRIPT/ig;
+		newStr = string.replace(findStr, '<b>ECMAScript</b>');  
+		document.write(newStr);
+	</script>
+</body>
+</html>
